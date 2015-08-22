@@ -19,6 +19,9 @@ Plugin 'https://github.com/scrooloose/nerdcommenter'
 Plugin 'https://github.com/jiangmiao/auto-pairs'
 Plugin 'https://github.com/terryma/vim-multiple-cursors'
 Plugin 'https://github.com/digitaltoad/vim-jade'
+Plugin 'https://github.com/mxw/vim-jsx'
+Plugin 'https://github.com/lfilho/cosco.vim'
+Plugin 'https://github.com/easymotion/vim-easymotion'
 
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -29,12 +32,19 @@ let g:UltiSnipsJumpForwardTrigger="<c-b>"
 let g:UltiSnipsJumpBackwardTrigger="<c-z>"
 
 " Ctrl p Settings
-if executable('ag')
-  " Use Ag over Grep
-  set grepprg=ag\ --nogroup\ --nocolor
-  " Use ag in CtrlP for listing files. Lightning fast and respects .gitignore
-  let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
-endif
+"if executable('ag')
+  "" Use Ag over Grep
+  "set grepprg=ag\ --nogroup\ --nocolor
+  "" Use ag in CtrlP for listing files. Lightning fast and respects .gitignore
+  "let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
+"endif
+
+" YouCompleteMe Settings
+let g:ycm_autoclose_preview_window_after_completion=1
+
+" Vim-jsx Settings
+let g:jsx_ext_required = 0
+
 
 " Make paste and copy work 
 set clipboard+=unnamed
